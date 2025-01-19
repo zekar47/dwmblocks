@@ -1,3 +1,7 @@
+HAS_BATTERY := $(shell [ -d /sys/class/power_supply/BAT0 ] && echo 1 || echo 0)
+
+CPPFLAGS += -DHAS_BATTERY=$(HAS_BATTERY)
+
 PREFIX  := /usr/local
 CC      := cc
 CFLAGS  := -pedantic -Wall -Wno-deprecated-declarations -Os
