@@ -7,9 +7,7 @@ static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
   {"<\x06", PATH "date.sh", 60, 1},
   {"<\x07", PATH "time.sh", 1, 2},
-#if HAS_BATTERY
-  {"<\x05", PATH "battery.sh", 30, 3},
-#endif
+  {"",      PATH "battery.sh", 30, 3},
   {"<\x03", PATH "internet.sh", 10, 4},
   {"<\x02", PATH "volume.sh", 0, 5},
   {"<\x04", PATH "resources.sh", 5, 6}
